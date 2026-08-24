@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
+import DateTime from './DateTime';
 
 function ToDoList(){
 
-    const [tasks, setTasks] = useState(["Task 1", "Task 2", "Task 3"]);
+    const [tasks, setTasks] = useState([""]);
     const [newTask, setNewTask] = useState("");
 
     function handleInputChange(event) {
@@ -46,6 +47,7 @@ function ToDoList(){
  return(
     <div className="to-do-list">
         <h1>Things I Need To Do</h1>
+        <DateTime />
         <div>
             <input 
                type="text"
